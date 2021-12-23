@@ -39,6 +39,8 @@
 #define REPACK_ORIG_DIR "/tmp/repackorig/"
 #define REPACK_NEW_DIR "/tmp/repacknew/"
 
+static constexpr const char* PERSIST_MOUNT_POINT = "/persist";
+
 #define NOT_AVAILABLE -2
 
 using namespace std;

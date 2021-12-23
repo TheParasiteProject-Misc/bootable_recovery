@@ -1573,9 +1573,10 @@ void DataManager::ReadSettingsFile(void)
 #endif // FOX_USE_DATA_RECOVERY_FOR_SETTINGS
   memset(mkdir_path, 0, sizeof(mkdir_path));
   memset(settings_file, 0, sizeof(settings_file));
-  sprintf(mkdir_path, "%s", GetSettingsStoragePath().c_str());
+  sprintf(mkdir_path, "%s/Fox", PERSIST_MOUNT_POINT);
   sprintf(settings_file, "%s/%s", mkdir_path, TW_SETTINGS_FILE);
 
+  /*
   if (!PartitionManager.Mount_Settings_Storage(false))
     {
       usleep(500000);
@@ -1583,8 +1584,12 @@ void DataManager::ReadSettingsFile(void)
 	gui_msg(Msg(msg::kError, "unable_to_mount=Unable to mount {1}")
 		(settings_file));
     }
+  */
 
+  bool persist_is_mounted = PartitionManager.Is_Mounted_By_Path(PERSIST_MOUNT_POINT);
+  if(!persist_is_mounted) PartitionManager.Mount_By_Path(PERSIST_MOUNT_POINT, false);
   mkdir(mkdir_path, 0777);
+  if (!persist_is_mounted) PartitionManager.UnMount_By_Path(PERSIST_MOUNT_POINT, false);
 
   LOGINFO("Attempt to load settings from settings file...\n");
   LoadValues(settings_file);
