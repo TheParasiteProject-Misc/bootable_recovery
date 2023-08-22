@@ -301,8 +301,8 @@
 				<action function="queueclear"/>
 				<action function="set">fox_m_author=topjohnwu</action>
 				<action function="set">fox_m_name={@module_install} Magisk %magisk_ver%</action>
-				<action function="set">tw_file=%fox_magisk_zip_installer%</action>
-				<action function="set">tw_filename=/persist/Fox/FoxFiles/%fox_magisk_zip_installer%</action>
+				<action function="set">tw_file=Magisk.apk</action>
+				<action function="set">tw_filename=/persist/Fox/FoxFiles/Magisk.apk</action>
 				<action function="set">tw_filecheck=%tw_filename%</action>
 				<action function="set">tw_zip_location=/persist/Fox/FoxFiles</action>
 				<action function="queuezip"/>
@@ -317,8 +317,8 @@
 				<action function="queueclear"/>
 				<action function="set">fox_m_author=topjohnwu</action>
 				<action function="set">fox_m_name={@module_uninstall} Magisk</action>
-				<action function="set">tw_file=%fox_magisk_uninstaller%</action>
-				<action function="set">tw_filename=/persist/Fox/FoxFiles/%fox_magisk_uninstaller%</action>
+				<action function="set">tw_file=uninstall.zip</action>
+				<action function="set">tw_filename=/persist/Fox/FoxFiles/uninstall.zip</action>
 				<action function="set">tw_filecheck=%tw_filename%</action>
 				<action function="set">tw_zip_location=/persist/Fox/FoxFiles</action>
 				<action function="queuezip"/>
