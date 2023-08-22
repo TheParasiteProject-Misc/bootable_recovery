@@ -22,8 +22,8 @@ InitFox() {
   [ -z "$LINES" ] && export LINES=21;
   [ -z "$COLUMNS" ] && export COLUMNS=44;
 
-  if [ -f /sdcard/Fox/fox.mkshrc ]; then
-     source /sdcard/Fox/fox.mkshrc;
+  if [ -f /persist/Fox/fox.mkshrc ]; then
+     source /persist/Fox/fox.mkshrc;
   elif [ -f /FFiles/fox.mkshrc ]; then
      source /FFiles/fox.mkshrc;
   elif [ -f /data/recovery/fox.mkshrc ]; then

@@ -4111,7 +4111,7 @@ void TWFunc::PrepareToFinish(void)
   // Check AromaFM Config
   if (
      (DataManager::GetIntValue(FOX_SAVE_LOAD_AROMAFM) == 1)
-  && (PartitionManager.Mount_By_Path("/sdcard", false))
+  && (PartitionManager.Mount_By_Path("/persist", false))
      )
     {
       string aromafm_path = Fox_Home;
@@ -4133,7 +4133,7 @@ void TWFunc::PrepareToFinish(void)
 	         LOGERR("Error copying AromaFM config\n");
 	      }
       	 }
-      PartitionManager.UnMount_By_Path("/sdcard", false);
+      PartitionManager.UnMount_By_Path("/persist", false);
     }
 
   // restore the stock recovery ?

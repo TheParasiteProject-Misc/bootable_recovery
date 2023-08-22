@@ -50,7 +50,7 @@
 
 #define OF_SPLASH_MAX_SIZE_STR "of_splash_max_size"
 
-#define OF_STORAGE_PATH		    "/sdcard/Fox/"
+#define OF_STORAGE_PATH		    "/persist/Fox/"
 #define TW_STORAGE_PATH             "/data/recovery/"
 #define TW_SETTINGS_FILE	    ".foxs"
 #define PERSIST_SETTINGS_FILE       "/persist/.foxs"
