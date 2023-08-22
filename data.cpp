@@ -721,9 +721,6 @@ void DataManager::SetDefaultValues()
   mConst.SetValue(BUILD_TYPE_STR, FOX_BUILD_TYPE);
   mConst.SetValue("fox_branch", FOX_BRANCH);
 
-  mConst.SetValue("fox_magisk_zip_installer", FOX_MAGISK_ZIP_INSTALLER);
-  mConst.SetValue("fox_magisk_uninstaller", FOX_MAGISK_UNINSTALLER);
-
   // override any hard-coded value in ui.xml
   mConst.SetValue("fox_theme_version", FOX_THEME_VERSION);
   //
