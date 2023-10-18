@@ -30,19 +30,6 @@
 					<action function="page">ext_custom_reset</action>
 				</listitem>
 				<listitem name="{@enter_password_cptn}">
-					<condition var1="tw_is_encrypted" var2="1"/>
-					<condition var1="tw_is_decrypted" var2="0"/>
-					<icon res="bs_btn_set_secure"/>
-					<action function="overlay">pass_error</action>
-				</listitem>
-				<listitem name="{@enter_password_cptn}">
-					<condition var1="tw_is_encrypted" var2="1"/>
-					<condition var1="tw_is_decrypted" var2="1"/>
-					<icon res="bs_btn_set_secure"/>
-					<action function="page">pass_select</action>
-				</listitem>
-				<listitem name="{@enter_password_cptn}">
-					<condition var1="tw_is_encrypted" var2="0"/>
 					<icon res="bs_btn_set_secure"/>
 					<action function="page">pass_select</action>
 				</listitem>
